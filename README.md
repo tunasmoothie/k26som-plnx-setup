@@ -15,7 +15,7 @@ View the current partition schemes using `sudo fdisk -l`.
 /dev/sdb is our SD card, and 1 partition (sdb1) is listed.
 
 
-Unmount the SD card partitions using `umount /dev/sdb`.
+Unmount the SD card partitions using `umount /dev/sdb1`.
 
 
 Use `sudo fdisk /dev/sdb` to start configuring partitions.
