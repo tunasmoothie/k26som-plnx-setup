@@ -8,17 +8,22 @@ Xilinx tools(Vitis, Vivado, Petalinux) release version 2021.1 is required.
 Petalinux requires a specific configuration of partitions and filesystems on the boot SD card.
 This tutorial will guide you through the process of configuring it on a linux-based OS.
 
-1. View the current partition schemes using `sudo fdisk -l`
+1. View the current partition schemes using `sudo fdisk -l`.
 ![image](https://user-images.githubusercontent.com/65555647/202134189-1bc00bf1-c3d1-46b6-bf5c-c16048b5525b.png)
 
 /dev/sdb is our SD card, and 1 partition (sdb1) is listed.
 
-2. Unmount the SD card partitions using `umount /dev/<partition>`
-![image](https://user-images.githubusercontent.com/65555647/202135999-f253deb3-9455-44fd-9109-82ebc826c369.png)
+
+2. Unmount the SD card partitions using `umount /dev/<partition>`.
 
 
-3. Use `sudo fdisk /dev/<SD card>` to start configuring partitions
+3. Use `sudo fdisk /dev/<SD card>` to start configuring partitions.
 ![image](https://user-images.githubusercontent.com/65555647/202135125-960edd1e-59fd-4859-a241-0d8b0f02b56a.png)
 
-Delete all parit
+Delete all partitions on the SD card.
+![image](https://user-images.githubusercontent.com/65555647/202136239-a5e38cbc-f744-42eb-a994-8d329b469907.png)
 
+4. Petalinux requires 2 partitions, **FAT32 for boot**, and **EXT4 for rootfs**. The boot partition needs to be at least 500MB. We will create it with 1GB here, and the rest of the space will go to the rootfs partition.
+
+![image](https://user-images.githubusercontent.com/65555647/202137099-ff2d2009-4f0c-41d8-829a-820eab09b23d.png)
+![image](https://user-images.githubusercontent.com/65555647/202137142-ea56cbb2-990e-4db6-ac62-348212d48374.png)
