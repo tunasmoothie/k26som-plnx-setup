@@ -11,7 +11,7 @@ This tutorial will guide you through the process of configuring it on a linux-ba
 1. View the current partition schemes using `sudo fdisk -l`.
 ![image](https://user-images.githubusercontent.com/65555647/202134189-1bc00bf1-c3d1-46b6-bf5c-c16048b5525b.png)
 
-/dev/sdb is our SD card, and 1 partition (sdb1) is listed.
+  /dev/sdb is our SD card, and 1 partition (sdb1) is listed.
 
 
 2. Unmount the SD card partitions using `umount /dev/sdb`.
@@ -29,23 +29,23 @@ Delete all partitions on the SD card.
 ![image](https://user-images.githubusercontent.com/65555647/202137099-ff2d2009-4f0c-41d8-829a-820eab09b23d.png)
 ![image](https://user-images.githubusercontent.com/65555647/202137142-ea56cbb2-990e-4db6-ac62-348212d48374.png)
 
-After partitioning, enter `w` to write all changes. `fdisk` should exit after writing.
+  After partitioning, enter `w` to write all changes. `fdisk` should exit after writing.
 ![image](https://user-images.githubusercontent.com/65555647/202137429-3972b0b8-5e6d-47a1-92ff-acaf45044302.png)
 
 
 5. To configure the filesystem type for the partitions:
-`sudo mkfs.vfat /dev/sdb1`
-`sudo mkfs.ext4 /dev/sdb2`
+  `sudo mkfs.vfat /dev/sdb1`
+  `sudo mkfs.ext4 /dev/sdb2`
 
-You may also want to name the partitions with
-`sudo fatlabel /dev/sdb1 BOOT`
-`sudo e2label /dev/sdb2 ROOT`
+  You may also want to name the partitions with
+  `sudo fatlabel /dev/sdb1 BOOT`
+  `sudo e2label /dev/sdb2 ROOT`
 
 
 6. Re-mount the SD card and verify that the paritions have been correctly with `df -T`
 ![image](https://user-images.githubusercontent.com/65555647/202139812-fe8016c8-a943-4d14-8a68-26c7399a89c3.png)
 
 
-The SD card is now ready for use.
+  The SD card is now ready for use.
 
 
