@@ -38,12 +38,15 @@ After partitioning, enter `w` to write all changes. `fdisk` should exit after wr
 
 
 To configure the filesystem type for the partitions:
+
 `sudo mkfs.vfat /dev/sdb1`
 
 `sudo mkfs.ext4 /dev/sdb2`
 
 You may also want to name the partitions with
+
 `sudo fatlabel /dev/sdb1 BOOT`
+
 `sudo e2label /dev/sdb2 ROOT`
 
 
