@@ -50,7 +50,7 @@ You may also want to name the partitions with
 `sudo e2label /dev/sdb2 ROOT`
 
 
-Re-mount the SD card and verify that the paritions have been correctly with `df -T`
+Re-mount the SD card and verify that the partitions have been correctly with `df -T`
 
 ![image](https://user-images.githubusercontent.com/65555647/202139812-fe8016c8-a943-4d14-8a68-26c7399a89c3.png)
 
