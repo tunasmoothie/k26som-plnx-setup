@@ -58,3 +58,10 @@ Re-mount the SD card and verify that the partitions have been correctly with `df
 The SD card is now ready for use.
 
 
+
+
+Image Packaging Configuration 
+Root filesystem type -> EXT4
+
+
+
