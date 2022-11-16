@@ -3,6 +3,7 @@ This repo is a collection of instructions and scripts to help setup a minimal Pe
 
 # Tools Version
 Xilinx tools(Vitis, Vivado, Petalinux) release version `2021.1` is required.
+
 Make sure to edit `env.sh` with the correct paths before starting.
 
 # SD Card Setup
