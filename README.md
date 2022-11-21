@@ -8,7 +8,7 @@ Make sure to edit `env.sh` with the correct paths before starting.
 
 # SD Card Setup
 Petalinux requires a specific configuration of partitions and filesystems on the boot SD card.
-This tutorial will guide you through the process of configuring it on a linux-based OS.
+This tutorial will guide you through the process of setting up the SD card and loading the boot files from your petalinux-build.
 
 View the current partition schemes using `sudo fdisk -l`.
 
@@ -56,10 +56,19 @@ Re-mount the SD card and verify that the partitions have been correctly with `df
 
 ![image](https://user-images.githubusercontent.com/65555647/202139812-fe8016c8-a943-4d14-8a68-26c7399a89c3.png)
 
+The SD card is now ready to be loaded.
 
-The SD card is now ready for use.
 
+Copy `BOOT.BIN`, `boot.scr`, and `image.ub` from *<your petalinux project>/images/linux/* into the BOOT partition of your SD card.
+Copy `rootfs.cpio.gz` into the ROOT partition of your SD card.
 
+To unpack the rootfs:
+```
+gzip -d rootfs.cpio.gz
+cpio -idm < rootfs.cpio
+```
+
+Your SD card should now be ready to boot with Petalinux.
 
 
 Image Packaging Configuration 
