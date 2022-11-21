@@ -6,6 +6,9 @@ Xilinx tools(Vitis, Vivado, Petalinux) release version `2021.1` is required.
 
 Make sure to edit `env.sh` with the correct paths before starting.
 
+# Building Petalinux
+(UNDER CONSTRUCTION)
+
 # SD Card Setup
 Petalinux requires a specific configuration of partitions and filesystems on the boot SD card.
 This tutorial will guide you through the process of setting up the SD card and loading the boot files from your petalinux-build.
