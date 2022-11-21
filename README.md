@@ -8,6 +8,8 @@ Make sure to edit `env.sh` with the correct paths and `source` it before startin
 
 # Building Petalinux
 (UNDER CONSTRUCTION)
+The provided Vivado project contains a modified KV260 IP core. Future design additions may be added to the BD, exported, and be used to build Petalinux.
+
 
 # SD Card Setup
 Petalinux requires a specific configuration of partitions and filesystems on the boot SD card.
