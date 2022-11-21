@@ -8,7 +8,7 @@ Make sure to edit `env.sh` with the correct paths and `source` it before startin
 
 # Building Petalinux
 (UNDER CONSTRUCTION)
-The provided Vivado project (located under project_build/hardware/xilinx-k26-starterkit-2021.1/) contains a modified KV260 IP core. Future design additions may be added to the BD, exported, and be used to build Petalinux.
+The provided Vivado project (located under *project_build/hardware/xilinx-k26-starterkit-2021.1/*) contains a modified KV260 IP core. Future design additions may be added to the BD, exported, and be used to build Petalinux.
 
 
 # SD Card Setup
