@@ -9,8 +9,8 @@ Make sure to edit `env.sh` with the correct paths and `source` it before startin
 # Building Petalinux
 (UNDER CONSTRUCTION)
 
-The provided Vivado project (located under *project_build/hardware/xilinx-k26-starterkit-2021.1/*) contains a configured Zynq Ultrascale+ MPSoC IP core. 
-Future design additions should be added to the BD in conjunction with this core, exported with bitstream, and be used to build Petalinux.
+The prebuilt Petalinux project contains a Vivado project (located under *project_build/hardware/xilinx-k26-starterkit-2021.1/*) which has a configured Zynq Ultrascale+ MPSoC IP core. 
+Future designs may reference this configuration for the K26 SOM.
 
 
 # SD Card Setup
