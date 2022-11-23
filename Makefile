@@ -48,45 +48,9 @@ VIVADO_PROJ := $(VP)
 
 .PHONY: update-hw
 update-hw:
-	eval '$(SCRIPTS)/create.sh $(realpath $(HW))'
+	eval '$(SCRIPTS)/update-hw.sh $(realpath $(HW))'
 
-
-
-.PHONY: overlay
-overlay: $(VITIS_OVERLAY_BIT)
-$(VITIS_OVERLAY_BIT): $(PFM_XPFM)
-	@valid=0; \
-	for o in $(OVERLAY_LIST); do \
-		if [ "$$o" = "$(OVERLAY)" ]; then \
-			valid=1; \
-			break; \
-		fi \
-	done; \
-	if [ "$$valid" -ne 1 ]; then \
-		echo 'Invalid parameter OVERLAY=$(OVERLAY). Choose one of: $(OVERLAY_LIST)'; \
-		exit 1; \
-	fi; \
-	echo 'Build $(OVERLAY) Vitis overlay using platform $(PFM)'; \
-	$(MAKE) -C $(VITIS_OVERLAY_DIR) all PLATFORM=$(PFM_XPFM)
-
-.PHONY: platform
-platform: $(PFM_XPFM)
-$(PFM_XPFM):
-	@valid=0; \
-	for p in $(PFM_LIST); do \
-		if [ "$$p" = "$(PFM)" ]; then \
-			valid=1; \
-			break; \
-		fi \
-	done; \
-	if [ "$$valid" -ne 1 ]; then \
-		echo 'Invalid parameter PFM=$(PFM). Choose one of: $(PFM_LIST)'; \
-		exit 1; \
-	fi; \
-	echo 'Create Vitis platform $(PFM)'; \
-	$(MAKE) -C $(PFM_DIR) platform PLATFORM=$(PFM) VERSION=$(PFM_VER)
 
 .PHONY: clean
 clean:
-	$(foreach o, $(OVERLAY_LIST), $(MAKE) -C $(VITIS_DIR)/$(o) clean;)
 	$(foreach p, $(PFM_LIST), $(MAKE) -C $(PFM_DIR) clean PLATFORM=$(p) VERSION=$(PFM_VER);)
