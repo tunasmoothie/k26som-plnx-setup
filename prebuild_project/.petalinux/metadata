@@ -1,6 +1,0 @@
-PETALINUX_VER=2021.1
-VALIDATE_HW_CHKSUM=1
-HARDWARE_CHECKSUM=207b60df98a561cbe2187623e4e12bf5
-YOCTO_SDK=b4cf886365639d226f0cd8f175d6238a
-RFSCONFIG_CHKSUM=e93f248e768cff5f36ca1a66dc91328d
-HARDWARE_PATH=/home/tunasmoothie/Documents/K26_project/builds/som-kvcarrier-build/hardware/xilinx-k26-starterkit-2021.1/project_1_wrapper.xsa
