@@ -1,4 +1,4 @@
-# K26 SOM Petalinux Setup Tutorial
+# K26 SOM Petalinux Setup Helper
 This repo is a collection of instructions and scripts to help setup a minimal Petalinux system, booting from an SD card, on a production K26 SOM.
 
 # Tools Version
