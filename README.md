@@ -10,11 +10,14 @@ Make sure to edit `env.sh` with the correct paths and `source` it before startin
 The provided scripts can automatically perform the project configuration, but manual configuration is done as follows:
 
 Because the KV260 Starter Kit uses a K26 SOM identical to the production line, we can base our Petalinux project off of the KV260 BSP provided by Xilinx [HERE](https://www.xilinx.com/support/download/index.html/content/xilinx/en/downloadNav/embedded-design-tools/2021-1.html).
+
 ![image](https://user-images.githubusercontent.com/65555647/203752335-cb815c76-b4e2-4ab7-8acc-46eccb7f2afd.png)
 
 
-1. Run `petalinux-create -t project -s xilinx-k26-starterkit-v2021.1-final.bsp` to create the Petalinux project.
-2. `cd` into the newly created project folder and run a preliminary `petalinux-build`.
+Run `petalinux-create -t project -s xilinx-k26-starterkit-v2021.1-final.bsp` to create the Petalinux project.
+
+`cd` into the newly created project folder and run a preliminary `petalinux-build`. Please refer to the [Common Problems](#common-problems) section at the bottom of this document if you run into any errors.
+
 
 
 # Prebuilt Project
@@ -90,5 +93,10 @@ Your SD card should now be ready to boot with Petalinux.
 Image Packaging Configuration 
 Root filesystem type -> EXT4
 
+# Common Problems
+### During Build Process
+  >(some package) do_package_write_rpm_setscene: No suitable staging package found
+     This is caused by a problem with Yocto's configuration where its tries to install nonexisting packages. The problem can be fixed by manually commenting out the sttate lines in *<project>/build/config/plnxtool.conf*
+![image](https://user-images.githubusercontent.com/65555647/203755292-2019778c-c1f0-4dae-94d5-f65409db23b0.png)
 
 
