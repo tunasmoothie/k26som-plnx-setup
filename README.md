@@ -10,6 +10,8 @@ Make sure to edit `env.sh` with the correct paths and `source` it before startin
 The provided scripts can automatically perform the project configuration, but manual configuration is done as follows:
 
 Because the KV260 Starter Kit uses a K26 SOM identical to the production line, we can base our Petalinux project off of the KV260 BSP provided by Xilinx [HERE](https://www.xilinx.com/support/download/index.html/content/xilinx/en/downloadNav/embedded-design-tools/2021-1.html).
+![image](https://user-images.githubusercontent.com/65555647/203752335-cb815c76-b4e2-4ab7-8acc-46eccb7f2afd.png)
+
 
 1. Run `petalinux-create -t project -s xilinx-k26-starterkit-v2021.1-final.bsp` to create the Petalinux project.
 2. `cd` into the newly created project folder and run a preliminary `petalinux-build`.
