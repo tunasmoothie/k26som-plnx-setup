@@ -1,7 +1,7 @@
 #!/bin/bash
 
 
-if petalinux-create -t project --template zynqMP -n plnx_project
+if petalinux-create -t project -s xilinx-k26-starterkit-v2021.1-final.bsp -n plnx_project
 then
 	echo 'Petalinux project created'
 else

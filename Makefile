@@ -39,15 +39,15 @@ help:
 
 .PHONY: create
 create:
-ifeq ($(VP),)
-	$(error No Vivado project specified)
-endif
 	eval '$(SCRIPTS)/create.sh $(realpath $(VP))'
 VIVADO_PROJ := $(VP)
 
 
 .PHONY: update-hw
 update-hw:
+ifeq ($(HW),)
+	$(error No HW specified)
+endif
 	eval '$(SCRIPTS)/update-hw.sh $(realpath $(HW))'
 
 
