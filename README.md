@@ -6,9 +6,16 @@ Xilinx tools(Vitis, Vivado, Petalinux) release version `2021.1` is required.
 
 Make sure to edit `env.sh` with the correct paths and `source` it before starting.
 
-# Building Petalinux
-(UNDER CONSTRUCTION)
+# Building Petalinux For K26 SOM + KV Carrier Card
+The provided scripts can automatically perform the project configuration, but manual configuration is done as follows:
 
+Because the KV260 Starter Kit uses a K26 SOM identical to the production line, we can base our Petalinux project off of the KV260 BSP provided by Xilinx [HERE](https://www.xilinx.com/support/download/index.html/content/xilinx/en/downloadNav/embedded-design-tools/2021-1.html).
+
+1. Run `petalinux-create -t project -s xilinx-k26-starterkit-v2021.1-final.bsp` to create the Petalinux project.
+2. `cd` into the newly created project folder and run a preliminary `petalinux-build`.
+
+
+# Prebuilt Project
 The prebuilt Petalinux project contains a Vivado project (located under *project_build/hardware/xilinx-k26-starterkit-2021.1/*) which has a configured Zynq Ultrascale+ MPSoC IP core. 
 Future designs may reference this configuration for the K26 SOM.
 
