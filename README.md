@@ -95,8 +95,13 @@ Root filesystem type -> EXT4
 
 # Common Problems
 ### During Build Process
-  >(some package) do_package_write_rpm_setscene: No suitable staging package found
+  >ERROR: (some package) do_package_write_rpm_setscene: No suitable staging package found
      This is caused by a problem with Yocto's configuration where its tries to install nonexisting packages. The problem can be fixed by manually commenting out the sttate lines in *<project>/build/config/plnxtool.conf*
 ![image](https://user-images.githubusercontent.com/65555647/203755292-2019778c-c1f0-4dae-94d5-f65409db23b0.png)
+
+  >ERROR: Nothing RPROVIDES 'misc-config' (but /home/tunasmoothie/Documents/k26som-plnx-setup/xilinx-k26-starterkit-2021.1/components/yocto/layers/meta-petalinux/recipes-core/images/petalinux-initramfs-image.bb RDEPENDS on or otherwise requires it)
+    This may happen on a freshly created kv260 project on first build. The misc layer is pre-written to be included, however the layer files are not included. Since we do not need the misc layer, we may simply edit it out of *<project>/project-spec/meta-user/conf/petalinuxbsp.conf* 
+  ![image](https://user-images.githubusercontent.com/65555647/203756531-cc71f6e4-2f4d-40e1-8c52-c8b59b7014b6.png)
+
 
 
