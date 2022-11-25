@@ -25,6 +25,8 @@ We should also enable the the SD1 slot to allow for booting from SD card.
 
 Make sure to generate bitstream and export hardware xsa (with bitstream) before exiting.
 
+Update the changes to your Petalinux project by running `petalinux-config --get-hw-description=<newly generated xsa>`
+
 
 
 # Prebuilt Project
