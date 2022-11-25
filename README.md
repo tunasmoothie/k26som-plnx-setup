@@ -18,7 +18,7 @@ Run `petalinux-create -t project -s xilinx-k26-starterkit-v2021.1-final.bsp` to 
 
 `cd` into the newly created project folder and run a preliminary `petalinux-build`. Please refer to the [Common Problems](#common-problems) section at the bottom of this document if you run into any errors.
 
-Although the K26 SOM is virtually identical to the one that come with the KV260 Starter Kit, one minor difference is that the KV260 has its QSPI memory locked to prevent users from bricking the machine. The K26 production SOM however has no such limitations, so we must edit the Zynq MPSoC IP in the Vivado project, enabling the QSPI (*hardware/xilinx-k26-starterkit-2021.1/*) to update this descrepency.
+Although the K26 SOM is virtually identical to the one that comes with the KV260 Starter Kit, one minor difference is that the KV260 has its QSPI memory locked to prevent users from bricking the machine. The K26 production SOM however has no such limitations, so we must edit the Zynq MPSoC IP in the Vivado project, enabling the QSPI (*hardware/xilinx-k26-starterkit-2021.1/*) to update this descrepency.
 We should also enable the the SD1 slot to allow for booting from SD card.
 
 ![image](https://user-images.githubusercontent.com/65555647/203911866-a84ecdd9-2d4b-4f73-b84e-1cac8f1c4bdf.png)
