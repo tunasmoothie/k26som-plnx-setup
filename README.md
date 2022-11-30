@@ -104,6 +104,7 @@ To unpack the rootfs:
 ```
 gzip -d rootfs.cpio.gz
 cpio -idm < rootfs.cpio
+rm rootfs.cpio.gz rootfs.cpio
 ```
 
 Your SD card should now be ready to boot with Petalinux.
